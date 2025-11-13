@@ -26,7 +26,7 @@ jobs:
           conda info
           conda list
 
-      # ✅ Tambahan: Autentikasi DagsHub agar bisa akses MLflow
+      # Tambahan: Autentikasi DagsHub agar bisa akses MLflow
       - name: Authenticate with DagsHub
         env:
           DAGSHUB_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
@@ -41,7 +41,7 @@ jobs:
           git config --global user.email "evameivina@example.com"
           git config --global user.name "Eva Meivina"
 
-      # ✅ Jalankan training script (kalau ada modelling.py)
+      # Jalankan training script (kalau ada modelling.py)
       - name: Run model training
         shell: bash -l {0}
         run: |
